@@ -1,7 +1,7 @@
 {
   "name": "http-transform-date",
   "version": "0.1.0",
-  "description": "Angular HTTP Transform Date allows easily convert ISO-formatted date to date object right in the service",
+  "description": "Angular HTTP Transform Date allows automatically convert ISO-formatted date to date object right in $http service",
   "main": "angular-http-transform-date.js",
   "scripts": {
     "test": "node ./node_modules/karma/bin/karma start"

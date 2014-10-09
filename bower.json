@@ -4,7 +4,7 @@
   "authors": [
     "Pavel Strashnov"
   ],
-  "description": "Angular HTTP Transform Date allows easily convert ISO-formatted date to date object right in the service",
+  "description": "Angular HTTP Transform Date allows automatically convert ISO-formatted date to date object right in $http service",
   "main": "angular-http-transform-date.js",
   "keywords": [
     "angular",
@@ -20,8 +20,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.26",
-    "angular-mocks": "~1.2.26",
-    "moment": "~2.8.3"
+    "angular": ">=1.2.0",
+    "angular-mocks": ">=1.2.0",
+    "moment": ">=2.6.0"
   }
 }
