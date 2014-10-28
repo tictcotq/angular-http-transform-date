@@ -42,6 +42,21 @@ describe('Transform date service', function () {
         expect(transformed).toEqual(angular.toJson(data));
     });
 
+    it('should be able to transform object property to ISO date format', function () {
+        //Arrange
+        var date = new Date(),
+            data = {
+                date: date
+            };
+
+        //Act
+        var transformed = HttpTransformDate.transformToISODateTime('date')(data);
+        data.date = moment(date).toISOString();
+
+        //Assert
+        expect(transformed).toEqual(angular.toJson(data));
+    });
+
     it('should be able to transform object property to date from string in date format', function () {
         //Arrange
         var date = new Date(),

@@ -53,6 +53,21 @@ angular.module('angular-http-transform-date', []).factory('HttpTransformDate', [
                     return angular.toJson(data);
                 };
             },
+            transformToISODateTime: function () {
+                var properties = arguments;
+
+                return function (data) {
+
+                    traverseProperties(data, properties, function (data, prop) {
+                        var date = moment(data[prop]);
+                        if (data[prop] && date.isValid()) {
+                            data[prop] = date.toISOString();
+                        }
+                    });
+
+                    return angular.toJson(data);
+                };
+            },
             getDateOnly: function (date) {
                 if (!date) {
                     return null;
